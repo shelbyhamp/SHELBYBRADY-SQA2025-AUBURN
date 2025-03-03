@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 # api keyKubeSec-master/TEST_ARTIFACTS/helm.values.yaml
+KubeSec-master/TEST_ARTIFACTS/helm.values.yaml
