@@ -51,5 +51,6 @@ Since `hooks` is outside of .git it will be configed locally:
 2. Make it executable so open terminal and put:
    chmod +x hooks/pre-commit
 3. RUN: git add .
-4. RUN: git commit -m "Test hook"
-5. OUTPUT: `Running Bandit for security scan...`
+4. Make sure you have bandit installed
+5. RUN: git commit -m "Test hook"
+6. OUTPUT: `Running Bandit for security scan...`
