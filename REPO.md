@@ -49,7 +49,7 @@ Since `hooks` is outside of .git it will be configed locally:
 
 1. In terminal run git config core.hooksPath hooks in project root
 2. Make it executable so open terminal and put:
-   chmod +x .git/hooks/pre-commit
+   chmod +x hooks/pre-commit
 3. RUN: git add .
 4. RUN: git commit -m "Test hook"
 5. OUTPUT: `Running Bandit for security scan...`
