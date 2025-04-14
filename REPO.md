@@ -45,8 +45,11 @@
 
 ## Git Hook Setup Instruction
 
-Since `.git/hooks/` is not shared on GitHub, team members should:
+Since `hooks` is outside of .git it will be configed locally:
 
-1. Copy `hooks/pre-commit.sh` into `.git/hooks/` and rename it to `pre-commit`
+1. In terminal run git config core.hooksPath hooks in project root
 2. Make it executable so open terminal and put:
    chmod +x .git/hooks/pre-commit
+3. RUN: git add .
+4. RUN: git commit -m "Test hook"
+5. OUTPUT: `Running Bandit for security scan...`
