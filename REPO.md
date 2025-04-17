@@ -19,6 +19,7 @@
 
 - A script named `fuzz.py` will randomly test 5 Python functions for bugs or crashes.
 - This will run automatically via GitHub Actions.
+- we had to use 'hypothesis' for fuzz testing instead of 'fuzzing'
 
 ### Forensics
 
@@ -53,4 +54,4 @@ Since `hooks` is outside of .git it will be configed locally:
 3. RUN: git add .
 4. Make sure you have bandit installed
 5. RUN: git commit -m "Test hook"
-6. OUTPUT: `Running Bandit for security scan...`
+6pip install fuzzing. OUTPUT: `Running Bandit for security scan...`
