@@ -26,7 +26,7 @@
 ### Forensics
 
 - We added logging to 5 Python methods to track how they are used and what input they receive.
-- These logs are saved to `forensics.log` during execution. by running python main.py /path/to/manifests or python scanner.py /path/to/manifets
+- These logs are saved to `forensics.log` during execution. by running python main.py /path/to/manifests or python scanner.py /path/to/manifests
 - Enhanced five key methods with forensic logging using Python's logging module. this was done in main.py and scanner.py
 - Helps trace potential hard-coded secrets, usernames, and passwords during analysis.
 - Functions updated: getCountFromAnalysis, checkIfValidSecret, scanUserName, scanPasswords, and main.
