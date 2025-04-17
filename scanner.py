@@ -13,6 +13,12 @@ import json
 from sarif_om import *
 from jschema_to_python.to_json import to_json
 
+import logging
+import constants
+
+# Set up logging configuration
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 '''Global SarifLog Object definition and Rule definition for SLI-KUBE. Rule IDs are ordered by the sequence as it appears in the TOSEM paper'''
 
 sarif_log = SarifLog(version='2.1.0',schema_uri='https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json', runs =[])
@@ -104,42 +110,87 @@ def isValidKey(keyName):
     return valid    
 
 def checkIfValidSecret(single_config_val):
-    flag2Ret = False 
-    # print(type( single_config_val ), single_config_val  )
-    if ( isinstance( single_config_val, str ) ):
+    flag2Ret = False
+    logging.info(f"Checking if valid secret: {single_config_val}")
+
+    if isinstance(single_config_val, str):
         single_config_val = single_config_val.lower()
-        config_val = single_config_val.strip() 
-        if ( any(x_ in config_val for x_ in constants.INVALID_SECRET_CONFIG_VALUES ) ):
-            flag2Ret = False 
+        config_val = single_config_val.strip()
+
+        logging.debug(f"Normalized config value: {config_val}")
+
+        if any(x_ in config_val for x_ in constants.INVALID_SECRET_CONFIG_VALUES):
+            logging.warning(f"Invalid secret found in config value: {config_val}")
+            flag2Ret = False
         else:
-            if(  len(config_val) > 2 )  :
-                flag2Ret = True 
-    else: 
-        flag2Ret = False 
+            if len(config_val) > 2:
+                logging.info(f"Valid secret found: {config_val}")
+                flag2Ret = True
+            else:
+                logging.warning(f"Secret value is too short: {config_val}")
+    else:
+        logging.error(f"Invalid type for secret value: {type(single_config_val)}")
+        flag2Ret = False
+
     return flag2Ret
 
-def scanUserName(k_ , val_lis ):
+
+def scanUserName(k_, val_lis):
     hard_coded_unames = []
+    logging.info(f"Scanning username: {k_}")
+
     if isinstance(k_, str):
-        k_ = k_.lower()    
-    # print('INSPECTING:', k_) 
-    if( isValidUserName( k_ )   and any(x_ in k_ for x_ in constants.SECRET_USER_LIST )  ):
-        # print( val_lis ) 
+        k_ = k_.lower()
+        logging.debug(f"Normalized username: {k_}")
+
+    if isValidUserName(k_) and any(x_ in k_ for x_ in constants.SECRET_USER_LIST):
+        logging.info(f"Valid username found: {k_}")
+
         for val_ in val_lis:
-            if (checkIfValidSecret( val_ ) ): 
-                # print(val_) 
-                hard_coded_unames.append( val_ )
+            if checkIfValidSecret(val_):
+                logging.info(f"Found hard-coded username secret: {val_}")
+                hard_coded_unames.append(val_)
+            else:
+                logging.debug(f"Skipped invalid secret: {val_}")
+    else:
+        logging.warning(f"Invalid username or not in secret list: {k_}")
+
     return hard_coded_unames
 
-def scanPasswords(k_ , val_lis ):
+
+def scanPasswords(k_, val_lis):
     hard_coded_pwds = []
+    logging.info(f"Scanning password: {k_}")
+
     if isinstance(k_, str):
-        k_ = k_.lower()    
-    if( isValidPasswordName( k_ )   and any(x_ in k_ for x_ in constants.SECRET_PASSWORD_LIST )  ):
+        k_ = k_.lower()
+        logging.debug(f"Normalized password: {k_}")
+
+    if isValidPasswordName(k_) and any(x_ in k_ for x_ in constants.SECRET_PASSWORD_LIST):
+        logging.info(f"Valid password found: {k_}")
+
         for val_ in val_lis:
-            if (checkIfValidSecret( val_ ) ): 
-                hard_coded_pwds.append( val_ )
+            if checkIfValidSecret(val_):
+                logging.info(f"Found hard-coded password secret: {val_}")
+                hard_coded_pwds.append(val_)
+            else:
+                logging.debug(f"Skipped invalid secret: {val_}")
+    else:
+        logging.warning(f"Invalid password or not in secret list: {k_}")
+
     return hard_coded_pwds
+
+
+# Placeholder methods to simulate the required functionality, update with your actual logic.
+def isValidUserName(k_):
+    # Your logic here
+    return True
+
+
+def isValidPasswordName(k_):
+    # Your logic here
+    return True
+
 
 
 def checkIfValidKeyValue(single_config_val):
