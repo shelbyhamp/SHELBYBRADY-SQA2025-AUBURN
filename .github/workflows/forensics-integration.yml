@@ -34,8 +34,8 @@ jobs:
           echo "Basic end-to-end run,passed" >> integration-test-results/integration_results.csv
           echo "Fuzzing + logging + scan integration,passed" >> integration-test-results/integration_results.csv
 
-      - name: Upload Test Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: integration-test-results
-          path: integration-test-results/
+      # - name: Upload Test Artifacts
+      #   uses: actions/upload-artifact@v2.3.1
+      #   with:
+      #     name: integration-test-results
+      #     path: integration-test-results/
