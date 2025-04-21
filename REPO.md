@@ -59,4 +59,4 @@ Since `hooks` is outside of .git it will be configed locally:
 3. RUN: git add .
 4. Make sure you have bandit installed
 5. RUN: git commit -m "Test hook"
-6pip install fuzzing. OUTPUT: `Running Bandit for security scan...`
+6. pip install fuzzing. OUTPUT: `Running Bandit for security scan...`
