@@ -31,8 +31,6 @@
 - Functions patched: `getCountFromAnalysis`, `checkIfValidSecret`, `scanUserName`, `scanPasswords`, and `main`.
 - This logging helps trace how secrets and sensitive inputs are processed during analysis.
 
-### GitHub Actions Workflow
-
 - We built a CI pipeline in `.github/workflows/forensics-integration.yml`.
 - On every commit or pull request, the pipeline:
   - Checks out the repo and sets up Python
@@ -40,7 +38,6 @@
   - Runs the Bandit scan and saves results to `bandit_report.csv`
   - Executes `fuzz.py` to perform fuzz testing and logging
   - Generates `integration_results.csv` with a summary of results
-  - Uploads all results as artifacts under `integration-test-results/`
 
 ---
 
@@ -51,13 +48,21 @@
 
 ---
 
+## Activities Completed
+
+- Added Git Hook to run Bandit and log issues to CSV on commit
+- Wrote a fuzzer (`fuzz.py`) to test 5 different Python methods
+- Added forensic logging to 5 key methods in the codebase
+- Built a GitHub Actions pipeline to run Bandit, the fuzzer, and generate test result logs
+
+---
+
 ## Lessons Learned
 
-- Learned how to automate security testing using Git Hooks and Bandit.
-- Gained experience with fuzz testing and randomized input generation using the `hypothesis` library.
-- Developed skills in software forensics and real-time logging to trace how inputs flow through an application.
-- Became more comfortable using GitHub Actions to automate testing and produce structured outputs.
-- Practiced clean collaborative workflows using Git and Python testing tools.
+- How to configure and use GitHub Actions for CI
+- How to use Bandit for static code security analysis
+- How to write basic fuzzers to discover bugs and edge cases
+- How logging can help trace bugs and secure forensic data
 
 ---
 

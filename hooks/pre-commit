@@ -1,4 +1,14 @@
 #!/bin/bash
-echo "Running Bandit for security scan..."
-bandit -r . -f csv -o integration-test-results/bandit_report.csv
+
+echo "Checking for Python file changes..."
+
+# Only run if Python files are staged for commit
+if git diff --cached --name-only | grep -E '\.py$' > /dev/null; then
+  echo "Python files detected. Running Bandit for security scan..."
+  mkdir -p integration-test-results
+  bandit -r . -f csv -o integration-test-results/bandit_report.csv
+else
+  echo "No Python files staged. Skipping Bandit."
+fi
+
 exit 0
