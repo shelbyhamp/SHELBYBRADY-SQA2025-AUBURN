@@ -1,5 +1,5 @@
 '''
-Prof Akond Rahman 
+Akond Rahman 
 May 04, 2021 
 Construct taint graphs based on weakness types 
 '''

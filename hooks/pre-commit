@@ -1,14 +1,17 @@
 #!/bin/bash
 
-echo "Checking for Python file changes..."
+echo "Checking for staged Python files..."
 
-# Only run if Python files are staged for commit
-if git diff --cached --name-only | grep -E '\.py$' > /dev/null; then
-  echo "Python files detected. Running Bandit for security scan..."
-  mkdir -p integration-test-results
-  bandit -r . -f csv -o integration-test-results/bandit_report.csv
-else
-  echo "No Python files staged. Skipping Bandit."
+# Get a list of staged .py files
+PY_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.py$')
+
+if [[ -z "$PY_FILES" ]]; then
+  echo "No Python files staged. Skipping Bandit scan."
+  exit 0
 fi
+
+echo "Running Bandit on staged Python files..."
+mkdir -p integration-test-results
+bandit -f csv -o integration-test-results/bandit_report.csv $PY_FILES
 
 exit 0
