@@ -9,6 +9,16 @@ runScanner,򞑣h§¯𑏻¥¥򽓽,cannot access local variable 'sarif_json' wher
 runScanner,nð­lÃ*£,cannot access local variable 'sarif_json' where it is not associated with a value
 runScanner,􃹠£,cannot access local variable 'sarif_json' where it is not associated with a value
 runScanner,𬻭󘙏,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,,local variable 'sarif_json' referenced before assignment
+runScanner,¾%,local variable 'sarif_json' referenced before assignment
+runScanner,򌅒àhÝ󋊓🎍󜡴^󳱢§¼󂕀GD񀡓Fd,local variable 'sarif_json' referenced before assignment
+runScanner,HÖ	,local variable 'sarif_json' referenced before assignment
+runScanner,󼞧󎓰â񸌛8Ø󨅞6𺉮ß,local variable 'sarif_json' referenced before assignment
+runScanner,򔎂,local variable 'sarif_json' referenced before assignment
+runScanner,򯺤ß'ø򁝇,local variable 'sarif_json' referenced before assignment
+runScanner,þ,local variable 'sarif_json' referenced before assignment
+runScanner,÷䵢¨qóH,local variable 'sarif_json' referenced before assignment
+runScanner,ÀTH,local variable 'sarif_json' referenced before assignment
 pd.read_csv,,No columns to parse from file
 json.loads,,Expecting value: line 1 column 1 (char 0)
 json.loads,:󒈞񃆜򝻻{Pjÿâàz,Expecting value: line 1 column 1 (char 0)
@@ -21,6 +31,17 @@ json.loads,áÉ¼􉧽𸋅º,Expecting value: line 1 column 1 (char 0)
 json.loads,􆂌񳑞y>Sá ìþë;æ,Expecting value: line 1 column 1 (char 0)
 json.loads,Î/,Expecting value: line 1 column 1 (char 0)
 json.loads,F÷Ø¬¬²V4¸ä,Expecting value: line 1 column 1 (char 0)
+json.loads,×e,Expecting value: line 1 column 1 (char 0)
+json.loads,Ø4,Expecting value: line 1 column 1 (char 0)
+json.loads,Ñý,Expecting value: line 1 column 1 (char 0)
+json.loads,򃚄򭷼ÿ¿,Expecting value: line 1 column 1 (char 0)
+json.loads,COM1,Expecting value: line 1 column 1 (char 0)
+json.loads,"Ù񕨅Å¦
+",Expecting value: line 1 column 1 (char 0)
+json.loads,ïñÜ񝂗,Expecting value: line 1 column 1 (char 0)
+json.loads,"ÿ
+{òþ",Expecting value: line 1 column 1 (char 0)
+json.loads, ,Expecting value: line 1 column 1 (char 0)
 df.to_csv,,Writing 1 cols but got 22 aliases
 df.to_csv,񭮦򘹁T򴻩,Writing 1 cols but got 22 aliases
 df.to_csv,øT_򭽦򭬐NF򯏠򼇤6	펈ÀèZt򧟕l񺌖W)È,Writing 1 cols but got 22 aliases
@@ -31,3 +52,12 @@ df.to_csv,;󎨵C,Writing 1 cols but got 22 aliases
 df.to_csv,çﲴ,Writing 1 cols but got 22 aliases
 df.to_csv,Ù򙾩7󶁦ø񈝊𗿯,Writing 1 cols but got 22 aliases
 df.to_csv,^<񂶕9Ð񯦝󆠇𘝹kÜbÖ𹌟󤊖Ë9󍳒,Writing 1 cols but got 22 aliases
+df.to_csv,Dd U𝃹-,Writing 1 cols but got 22 aliases
+df.to_csv,undefined,Writing 1 cols but got 22 aliases
+df.to_csv,򢀇,Writing 1 cols but got 22 aliases
+df.to_csv,ìêèà,Writing 1 cols but got 22 aliases
+df.to_csv,ðÜeM,Writing 1 cols but got 22 aliases
+df.to_csv,NIL,Writing 1 cols but got 22 aliases
+df.to_csv,BVâª,Writing 1 cols but got 22 aliases
+df.to_csv,Ï'􈋅,Writing 1 cols but got 22 aliases
+df.to_csv,INF,Writing 1 cols but got 22 aliases
