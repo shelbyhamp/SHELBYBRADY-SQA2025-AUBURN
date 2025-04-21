@@ -7,6 +7,26 @@ from main import getCountFromAnalysis
 import scanner  # Make sure scanner.runScanner() can accept string paths
 import constants
 
+import csv
+import os
+
+# Ensure results directory exists
+os.makedirs("integration-test-results", exist_ok=True)
+
+# Create fuzz_report.csv with headers
+with open("integration-test-results/fuzz_report.csv", "w", newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(["Function", "Input", "Error"])
+
+def log_crash(func_name, input_val, error):
+    with open("integration-test-results/fuzz_report.csv", "a", newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            func_name,
+            str(input_val).replace(",", ";"),
+            str(error).replace(",", ";")
+        ])
+
 
 # 1. Test getCountFromAnalysis with random list of tuples
 @given(
@@ -47,7 +67,7 @@ def test_getCountFromAnalysis(input_data):
     try:
         getCountFromAnalysis(input_data)
     except Exception as e:
-        print(f"[getCountFromAnalysis] Crash: {e}")
+        log_crash("getCountFromAnalysis", input_data, e)
 
 
 # 2. Test scanner.runScanner with fake directory names
@@ -57,7 +77,8 @@ def test_runScanner(fake_path):
     try:
         scanner.runScanner(fake_path)
     except Exception as e:
-        print(f"[runScanner] Crash: {e}")
+        log_crash("runScanner", fake_path, e)
+
 
 
 # 3. Test pd.read_csv with generated CSV strings
@@ -68,7 +89,7 @@ def test_dataframe_read(data):
         csv_like = StringIO(data)
         pd.read_csv(csv_like)
     except Exception as e:
-        print(f"[DataFrame Read] Crash: {e}")
+        log_crash("pd.read_csv", data, e)
 
 
 # 4. JSON parsing fuzz
@@ -78,7 +99,7 @@ def test_json_parsing(data):
     try:
         json.loads(data)
     except Exception as e:
-        print(f"[json.loads] Crash: {e}")
+        log_crash("json.loads", data, e)
 
 
 # 5. to_csv with a DataFrame and known CSV_HEADER
@@ -89,7 +110,7 @@ def test_dataframe_to_csv(data):
         df = pd.DataFrame([[data]])
         df.to_csv(StringIO(), header=constants.CSV_HEADER, index=False, encoding=constants.CSV_ENCODING)
     except Exception as e:
-        print(f"[to_csv] Crash: {e}")
+        log_crash("df.to_csv", data, e)
 
 
 # Entry point

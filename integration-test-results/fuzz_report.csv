@@ -1,0 +1,33 @@
+Function,Input,Error
+runScanner,,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,ø.cöA¸åv{Ê,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,"I󾾨񿧺c-󡜃
+5",cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,~,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,𣂨1Ê¶򸱴¯¹í,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,ö𠭔S󵽎®»,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,񗋝Çî,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,­,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,ë,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,None,cannot access local variable 'sarif_json' where it is not associated with a value
+pd.read_csv,,No columns to parse from file
+json.loads,,Expecting value: line 1 column 1 (char 0)
+json.loads,6󯻳񔿤񘝜򷁇ÇÃC,Extra data: line 1 column 2 (char 1)
+json.loads,Á§,Expecting value: line 1 column 1 (char 0)
+json.loads,W,Expecting value: line 1 column 1 (char 0)
+json.loads,󒘓],Expecting value: line 1 column 1 (char 0)
+json.loads,";",Expecting value: line 1 column 2 (char 1)
+json.loads,𗄒,Expecting value: line 1 column 1 (char 0)
+json.loads,Á,Expecting value: line 1 column 1 (char 0)
+json.loads,¼,Expecting value: line 1 column 1 (char 0)
+json.loads,.򹎃#õ,Expecting value: line 1 column 1 (char 0)
+df.to_csv,,Writing 1 cols but got 22 aliases
+df.to_csv,*G󦚰#𳷛,Writing 1 cols but got 22 aliases
+df.to_csv,5,Writing 1 cols but got 22 aliases
+df.to_csv,vù,Writing 1 cols but got 22 aliases
+df.to_csv,6¢$򍲉È񧤧~,Writing 1 cols but got 22 aliases
+df.to_csv,nW*1È,Writing 1 cols but got 22 aliases
+df.to_csv,¹²Ë󌦓 }7;`	ß󘦩,Writing 1 cols but got 22 aliases
+df.to_csv,¢,Writing 1 cols but got 22 aliases
+df.to_csv,undefined,Writing 1 cols but got 22 aliases
+df.to_csv,񳞘,Writing 1 cols but got 22 aliases
