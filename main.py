@@ -13,10 +13,11 @@ import logging
 
 # Configure the logger
 logging.basicConfig(
-    level=logging.DEBUG,  # Set to DEBUG to capture all levels of logs
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.StreamHandler()]
+    filename='integration-test-results/forensics_log.csv',
+    level=logging.INFO,
+    format='%(asctime)s,INFO,%(message)s'
 )
+
 
 def getCountFromAnalysis(ls_):
     logging.info("Starting analysis of list")

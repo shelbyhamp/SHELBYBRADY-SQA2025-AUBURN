@@ -17,7 +17,14 @@ import logging
 import constants
 
 # Set up logging configuration
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+import os
+os.makedirs("integration-test-results", exist_ok=True)
+
+logging.basicConfig(
+    filename='integration-test-results/forensics_log.csv',
+    level=logging.INFO,
+    format='%(asctime)s,INFO,%(message)s'
+)
 
 '''Global SarifLog Object definition and Rule definition for SLI-KUBE. Rule IDs are ordered by the sequence as it appears in the TOSEM paper'''
 
