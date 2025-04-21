@@ -1,13 +1,15 @@
 #!/bin/bash
 
-echo "Scanning all Python files in the repo (excluding non-Python files)..."
+echo "Scanning all Python files in the repo (excluding non-project files)..."
 
-# Find all .py files (excluding hidden and irrelevant dirs)
+# Find all .py files excluding unnecessary dirs
 PY_FILES=$(find . -type f -name "*.py" \
   -not -path "./.venv/*" \
+  -not -path "./venv/*" \
   -not -path "./__pycache__/*" \
   -not -path "./integration-test-results/*" \
-  -not -path "./.git/*")
+  -not -path "./.git/*" \
+  -not -path "*/site-packages/*")
 
 if [[ -z "$PY_FILES" ]]; then
   echo "No Python files found. Skipping Bandit scan."
@@ -15,7 +17,12 @@ if [[ -z "$PY_FILES" ]]; then
 fi
 
 mkdir -p integration-test-results
-bandit -f csv -o integration-test-results/bandit_report.csv $PY_FILES
+
+# Run Bandit and also explicitly exclude folders for extra safety
+bandit -f csv \
+  -o integration-test-results/bandit_report.csv \
+  -x .venv,venv,__pycache__,integration-test-results,.git,site-packages \
+  $PY_FILES
 
 echo "Bandit scan complete."
 exit 0
