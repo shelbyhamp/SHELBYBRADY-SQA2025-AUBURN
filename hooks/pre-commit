@@ -1,17 +1,21 @@
 #!/bin/bash
 
-echo "Checking for staged Python files..."
+echo "Scanning all Python files in the repo (excluding non-Python files)..."
 
-# Get a list of staged .py files
-PY_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.py$')
+# Find all .py files (excluding hidden and irrelevant dirs)
+PY_FILES=$(find . -type f -name "*.py" \
+  -not -path "./.venv/*" \
+  -not -path "./__pycache__/*" \
+  -not -path "./integration-test-results/*" \
+  -not -path "./.git/*")
 
 if [[ -z "$PY_FILES" ]]; then
-  echo "No Python files staged. Skipping Bandit scan."
+  echo "No Python files found. Skipping Bandit scan."
   exit 0
 fi
 
-echo "Running Bandit on staged Python files..."
 mkdir -p integration-test-results
 bandit -f csv -o integration-test-results/bandit_report.csv $PY_FILES
 
+echo "Bandit scan complete."
 exit 0
