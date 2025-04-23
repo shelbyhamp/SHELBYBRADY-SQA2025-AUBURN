@@ -1,63 +1,32 @@
 Function,Input,Error
 runScanner,,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,TRUE,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,􌺂÷,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,񈃆Q/e,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,򄵖xL𰃁ÆÁÎ𦈨\򩂳,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner, ï£Áë,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,򞑣h§¯𑏻¥¥򽓽,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,nð­lÃ*£,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,􃹠£,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,𬻭󘙏,cannot access local variable 'sarif_json' where it is not associated with a value
-runScanner,,local variable 'sarif_json' referenced before assignment
-runScanner,¾%,local variable 'sarif_json' referenced before assignment
-runScanner,򌅒àhÝ󋊓🎍󜡴^󳱢§¼󂕀GD񀡓Fd,local variable 'sarif_json' referenced before assignment
-runScanner,HÖ	,local variable 'sarif_json' referenced before assignment
-runScanner,󼞧󎓰â񸌛8Ø󨅞6𺉮ß,local variable 'sarif_json' referenced before assignment
-runScanner,򔎂,local variable 'sarif_json' referenced before assignment
-runScanner,򯺤ß'ø򁝇,local variable 'sarif_json' referenced before assignment
-runScanner,þ,local variable 'sarif_json' referenced before assignment
-runScanner,÷䵢¨qóH,local variable 'sarif_json' referenced before assignment
-runScanner,ÀTH,local variable 'sarif_json' referenced before assignment
+runScanner,«,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,ÿÂc³Im,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,Ñ,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,±,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,󡉾}ø²DúÔA,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,򗧻򥿭Ô§?,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,Â,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner, 2AV󜃌Q,cannot access local variable 'sarif_json' where it is not associated with a value
+runScanner,àzl,cannot access local variable 'sarif_json' where it is not associated with a value
 pd.read_csv,,No columns to parse from file
 json.loads,,Expecting value: line 1 column 1 (char 0)
-json.loads,:󒈞񃆜򝻻{Pjÿâàz,Expecting value: line 1 column 1 (char 0)
-json.loads,m෇HExYä,Expecting value: line 1 column 1 (char 0)
-json.loads,򄤜,Expecting value: line 1 column 1 (char 0)
-json.loads,"t	H+J­æ
-b",Expecting value: line 1 column 1 (char 0)
-json.loads,}lZøÀ;¿·ZL3񄙏&ñ,Expecting value: line 1 column 1 (char 0)
-json.loads,áÉ¼􉧽𸋅º,Expecting value: line 1 column 1 (char 0)
-json.loads,􆂌񳑞y>Sá ìþë;æ,Expecting value: line 1 column 1 (char 0)
-json.loads,Î/,Expecting value: line 1 column 1 (char 0)
-json.loads,F÷Ø¬¬²V4¸ä,Expecting value: line 1 column 1 (char 0)
-json.loads,×e,Expecting value: line 1 column 1 (char 0)
-json.loads,Ø4,Expecting value: line 1 column 1 (char 0)
-json.loads,Ñý,Expecting value: line 1 column 1 (char 0)
-json.loads,򃚄򭷼ÿ¿,Expecting value: line 1 column 1 (char 0)
-json.loads,COM1,Expecting value: line 1 column 1 (char 0)
-json.loads,"Ù񕨅Å¦
-",Expecting value: line 1 column 1 (char 0)
-json.loads,ïñÜ񝂗,Expecting value: line 1 column 1 (char 0)
-json.loads,"ÿ
-{òþ",Expecting value: line 1 column 1 (char 0)
-json.loads, ,Expecting value: line 1 column 1 (char 0)
+json.loads,折Ë,Expecting value: line 1 column 1 (char 0)
+json.loads,󓗂,Expecting value: line 1 column 1 (char 0)
+json.loads,󡄀ù¹,Expecting value: line 1 column 1 (char 0)
+json.loads,_tenant,Expecting value: line 1 column 1 (char 0)
+json.loads,򄈻ó,Expecting value: line 1 column 1 (char 0)
+json.loads,ÏéµM,Expecting value: line 1 column 1 (char 0)
+json.loads,𿕜\×8F򸱓£,Expecting value: line 1 column 1 (char 0)
+json.loads,7Óº,Extra data: line 1 column 2 (char 1)
 df.to_csv,,Writing 1 cols but got 22 aliases
-df.to_csv,񭮦򘹁T򴻩,Writing 1 cols but got 22 aliases
-df.to_csv,øT_򭽦򭬐NF򯏠򼇤6	펈ÀèZt򧟕l񺌖W)È,Writing 1 cols but got 22 aliases
-df.to_csv,}4^Ä,Writing 1 cols but got 22 aliases
-df.to_csv,,Writing 1 cols but got 22 aliases
-df.to_csv,񶑂µ¬× q,Writing 1 cols but got 22 aliases
-df.to_csv,;󎨵C,Writing 1 cols but got 22 aliases
-df.to_csv,çﲴ,Writing 1 cols but got 22 aliases
-df.to_csv,Ù򙾩7󶁦ø񈝊𗿯,Writing 1 cols but got 22 aliases
-df.to_csv,^<񂶕9Ð񯦝󆠇𘝹kÜbÖ𹌟󤊖Ë9󍳒,Writing 1 cols but got 22 aliases
-df.to_csv,Dd U𝃹-,Writing 1 cols but got 22 aliases
-df.to_csv,undefined,Writing 1 cols but got 22 aliases
-df.to_csv,򢀇,Writing 1 cols but got 22 aliases
-df.to_csv,ìêèà,Writing 1 cols but got 22 aliases
-df.to_csv,ðÜeM,Writing 1 cols but got 22 aliases
-df.to_csv,NIL,Writing 1 cols but got 22 aliases
-df.to_csv,BVâª,Writing 1 cols but got 22 aliases
-df.to_csv,Ï'􈋅,Writing 1 cols but got 22 aliases
-df.to_csv,INF,Writing 1 cols but got 22 aliases
+df.to_csv,񮤬,Writing 1 cols but got 22 aliases
+df.to_csv,"I÷Ø񚂛🉚󲲟³é`Éé[®`""--;_Á",Writing 1 cols but got 22 aliases
+df.to_csv,"򉬫Ï¨ºT%贬ýX𣯨
+i𸂚à񱗣Ñ򮡀Í",Writing 1 cols but got 22 aliases
+df.to_csv,c󤿲񌰋°',Writing 1 cols but got 22 aliases
+df.to_csv,Á񠻉]Ëi¦J󲾜Å,Writing 1 cols but got 22 aliases
+df.to_csv,󀪹Íâi󔔌𬔎,Writing 1 cols but got 22 aliases
+df.to_csv,Aå1,Writing 1 cols but got 22 aliases
+df.to_csv,*V,Writing 1 cols but got 22 aliases
+df.to_csv,򀮛򪸐(o,Writing 1 cols but got 22 aliases
