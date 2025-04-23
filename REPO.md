@@ -78,6 +78,3 @@ Since `hooks` is outside of .git it will be configed locally:
 5. RUN: git commit -m "Test hook"
 6. pip install fuzzing. OUTPUT: `Running Bandit for security scan...`
 
-
-## Report
-A paragraph form of our report is located in report.md
