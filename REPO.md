@@ -8,6 +8,11 @@
 ---
 
 ## Group Activities
+- Shelby created inital repo
+- Brady and Shelby worked together on creating the githooks and both of us pulled repo and tested it 
+- Shelby added the intial fuzzing and some logging forensics, but they were not working properly so Brady tested and fixed them
+- Brady fixed crashes
+- Shelby wrote and added the report to repo.md
 
 ### Git Hook (Security Scan with Bandit)
 
